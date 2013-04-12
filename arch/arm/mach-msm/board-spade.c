@@ -3048,7 +3048,7 @@ static struct platform_device *devices[] __initdata = {
         &msm_rotator_device,
 #endif
         &android_pmem_adsp_device,
-        &android_pmem_audio_device,
+        /* &android_pmem_audio_device, */
         &msm_device_i2c,
         &msm_device_i2c_2,
 #if defined(CONFIG_MSM7KV2_1X_AUDIO) || defined(CONFIG_MSM7KV2_AUDIO)
@@ -3396,6 +3396,7 @@ static void __init reserve_pmem_memory(void)
 	reserve_memory_for(&android_pmem_adsp_pdata);
 	reserve_memory_for(&android_pmem_audio_pdata);
 	reserve_memory_for(&android_pmem_pdata);
+	msm7x30_reserve_table[MEMTYPE_EBI0].size += PMEM_KERNEL_EBI0_SIZE;
 #endif
 #endif
 }

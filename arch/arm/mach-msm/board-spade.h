@@ -50,7 +50,7 @@ extern struct platform_device msm_device_mddi0;
 
 #define MSM_PMEM_CAMERA_BASE	0x2DD00000
 #define MSM_PMEM_CAMERA_SIZE	0x00C00000
-
+#define PMEM_KERNEL_EBI0_SIZE   0x00600000
 #define MSM_PMEM_MDP_BASE	0x2DD00000
 #define MSM_PMEM_MDP_SIZE	0x02000000
 
